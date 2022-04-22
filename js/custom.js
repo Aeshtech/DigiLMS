@@ -1,18 +1,16 @@
 $(document).ready(function () {
   // executes when HTML-Document is loaded and DOM is ready
-  // Most Popular Course Card Hover Effect
-  $(".card").hover(
-    function () {
-      $(this)
-        .addClass("shadow")
-        .css("cursor", "pointer");
-    },
-    function () {
-      $(this).removeClass("shadow");
-    }
-  );
+  
+  // change the nav bg color on scroll
+  $(function () {
+    $(document).scroll(function () {
+      var $nav = $(".navbar");
+      $nav.toggleClass('bg-dark', $(this).scrollTop() > $nav.height());
+    });
+  });
 
-
+  
+  
   $(function () {
     $("#playlist li").on("click", function () {
       $("#videoarea").attr({

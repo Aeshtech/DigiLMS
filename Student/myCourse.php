@@ -14,9 +14,7 @@ include_once('../dbConnection.php');
  }
 ?>
 
- <div class="container mt-5 ml-2">
-  <div class="row">
-   <div class="jumbotron">
+ <div class="col-12 col-md-9 mt-5 ml-2">
     <h4 class="text-center">All Course</h4>
     <?php 
    if(isset($stuLogEmail)){
@@ -37,8 +35,8 @@ include_once('../dbConnection.php');
                   <p class="card-title"><?php echo $row['course_desc']; ?></p>
                   <small class="card-text">Duration: <?php echo $row['course_duration']; ?></small><br />
                   <small class="card-text">Instructor: <?php echo $row['course_author']; ?></small><br/>
-                  <p class="card-text d-inline">Price: <small><del>&#8377 <?php echo $row['course_original_price'] ?> </del></small> <span class="font-weight-bolder">&#8377 <?php echo $row['course_price']?> <span></p>
-                  <a href="watchcourse.php?course_id=<?php echo $row['course_id'] ?>" class="btn btn-primary mt-5 float-right">Watch Course</a>
+                  <p class="card-text d-block">Price: <small><del>&#8377 <?php echo $row['course_original_price'] ?> </del></small> <span class="font-weight-bolder">&#8377 <?php echo $row['course_price']?> <span></p>
+                  <a href="watchcourse.php?course_id=<?php echo $row['course_id'] ?>" class="btn btn-primary mt-5 float-end">Watch Course</a>
                 </div>
               </div>
           
@@ -52,8 +50,6 @@ include_once('../dbConnection.php');
   
     ?>
     <hr/>
-   </div>
-  </div>
  </div>
 
  </div> <!-- Close Row Div from header file -->

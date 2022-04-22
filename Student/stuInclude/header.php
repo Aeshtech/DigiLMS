@@ -28,10 +28,7 @@ include_once('../dbConnection.php');
   <?php echo TITLE ?>
  </title>
  <!-- Bootstrap CSS -->
- <link rel="stylesheet" href="../css/bootstrap.min.css">
-
- <!-- Font Awesome CSS -->
- <link rel="stylesheet" href="../css/all.min.css">
+ <link rel="stylesheet" href="../css/bootstrap.minified.css">
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
@@ -43,8 +40,9 @@ include_once('../dbConnection.php');
 
 <body>
  <!-- Top Navbar -->
- <nav class="navbar navbar-dark fixed-top flex-md-nowrap p-0 shadow" style="background-color: #225470;">
-  <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="../">E-Learning</a>
+ <nav class="navbar navbar-dark bg-dark fixed-top flex-md-nowrap p-0 shadow">
+  <a class="btn btn-primary ms-3" href="../index.php">Home</a>
+  <a class="navbar-brand col-sm-3 col-md-2 text-center text-primary" href="../index.php">Digi LMS</a>
  </nav>
 
  <!-- Side Bar -->

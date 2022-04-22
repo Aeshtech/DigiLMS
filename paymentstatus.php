@@ -10,7 +10,7 @@
 	}
 
 ?>  
-   <div class="container-fluid bg-dark"> <!-- Start Course Page Banner -->
+   <div class="container-fluid p-0 bg-dark"> <!-- Start Course Page Banner -->
      <div class="row">
        <img src="./image/coursebanner.jpg" alt="courses" style="height:300px; width:100%; object-fit:cover; box-shadow:10px;"/>
      </div> 
@@ -21,7 +21,7 @@
      <div class="form-group row">
         <label class="offset-sm-3 col-form-label">Order ID: </label>
         <div>
-          <input class="form-control mx-3" id="ORDER_ID" tabindex="1" maxlength="20" size="20" name="ORDER_ID" autocomplete="off" value="<?php echo $ORDER_ID ?>">
+          <input class="form-control w-25 mx-auto" id="ORDER_ID" tabindex="1" maxlength="20" size="20" name="ORDER_ID" autocomplete="off" value="<?php echo $ORDER_ID ?>">
         </div>
         <div>
           <input class="btn btn-primary mx-4" value="View" type="submit"	onclick="">

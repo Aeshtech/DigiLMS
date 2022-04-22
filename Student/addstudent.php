@@ -17,11 +17,12 @@ if(isset($_POST['stuemail']) && isset($_POST['checkemail'])){
   }
  
   // Inserting or Adding New Student
+  $stuImg = '../image/stu/pexels-photo-120222.jpeg';
   if(isset($_POST['stusignup']) && isset($_POST['stuname']) && isset($_POST['stuemail']) && isset($_POST['stupass'])){
     $stuname = $_POST['stuname'];
     $stuemail = $_POST['stuemail'];
     $stupass = $_POST['stupass'];
-    $sql = "INSERT INTO student(stu_name, stu_email, stu_pass) VALUES ('$stuname', '$stuemail', '$stupass')";
+    $sql = "INSERT INTO `student`( `stu_name`, `stu_email`, `stu_pass`,`stu_img`) VALUES ('$stuname', '$stuemail', '$stupass','$stuImg')";
     if($conn->query($sql) == TRUE){
       echo json_encode("OK");
     } else {

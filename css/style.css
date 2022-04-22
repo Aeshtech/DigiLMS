@@ -4,15 +4,8 @@
   font-weight: bold;
   color: #fff;
 }
-
-.custom-nav .custom-nav-item a {
-  color: #fff !important;
-}
-
-.custom-nav-item:hover {
-  background-color: #dc3545;
-  border: solid #dc3545 1px;
-  border-radius: 10px;
+.nav-item:hover a {
+  color: white!important;
 }
 
 .remove-vid-marg {
@@ -63,7 +56,7 @@ a.social-hover:hover {
 }
 
 .stripe {
-  background-image: linear-gradient(240deg, #ed213a, #93291e);
+  background-image: linear-gradient(240deg, #1691f5, #750ffc);
   padding: 3rem;
   height: 13rem;
   margin-top: 4rem;
@@ -72,12 +65,6 @@ a.social-hover:hover {
 }
 
 @media screen and (min-width: 0px) and (max-width: 700px) {
-  .my-content,
-  .txt-banner,
-  .stripe {
-    display: none;
-  } /* hide it on small screens */
-
   .vid-content {
     top: 12%;
     left: 60%;

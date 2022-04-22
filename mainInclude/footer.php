@@ -1,6 +1,6 @@
  <!-- Start Footer -->
  <footer class="container-fluid bg-dark text-center p-2">
-    <small class="text-white">Copyright &copy; 2019 || Designed By E-Learning || <?php   
+    <small class="text-white">Copyright &copy; 2022 || Designed By Aeshtech || <?php   
           if (isset($_SESSION['is_admin_login'])){
             echo '<a href="admin/adminDashboard.php"> Admin Dashboard</a> <a href="logout.php">Logout</a>';
           }else {
@@ -12,13 +12,12 @@
  </footer> <!-- End Footer -->
 
     <!-- Start Student Registration Modal -->
-    <div class="modal fade" id="stuRegModalCenter" tabindex="-1" role="dialog" aria-labelledby="stuRegModalCenterTitle" aria-hidden="true">
+    <div class="modal fade" id="stuRegModalCenter" role="dialog" aria-labelledby="stuRegModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="stuRegModalCenterTitle">Student Registration</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="clearAllStuReg()">
-              <span aria-hidden="true">&times;</span>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="clearAllStuReg()">
             </button>
           </div>
           <div class="modal-body">
@@ -37,13 +36,12 @@
 
 
     <!-- Start Student Login Modal -->
-    <div class="modal fade" id="stuLoginModalCenter" tabindex="-1" role="dialog" aria-labelledby="stuLoginModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal fade" id="stuLoginModalCenter" role="dialog" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="stuLoginModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="stuLoginModalCenterTitle">Student Login</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onClick="clearStuLoginWithStatus()">
-              <span aria-hidden="true">&times;</span>
+            <button class="btn-close" type="button" class="close" data-bs-dismiss="modal" aria-label="Close" onClick="clearStuLoginWithStatus()">
             </button>
           </div>
           <div class="modal-body">
@@ -73,8 +71,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="adminLoginModalCenterTitle">Admin Login</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onClick="clearAdminLoginWithStatus()">
-              <span aria-hidden="true">&times;</span>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick="clearAdminLoginWithStatus()">
             </button>
           </div>
           <div class="modal-body">
@@ -99,8 +96,8 @@
 
     <!-- Jquery and Boostrap JavaScript -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/popper.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.minified.js"></script>
+
 
     <!-- Font Awesome JS -->
     <script type="text/javascript" src="js/all.min.js"></script>
@@ -118,19 +115,12 @@
     <!-- Custom JavaScript -->
     <script type="text/javascript" src="js/custom.js"></script>
     <script>
-      $(document).ready(function () {
-        // Change Navbar Color on Scroll
-        // $(window).scrollTop() returns the position of the top of the page
-        $(window).scroll(function () {
-          if ($(window).scrollTop() >= 600) {
-          $(".navbar").css("background-color", "#225470");
-          } else {
-          $(".navbar").css("background-color", "transparent");
-          }
-        });
-        })
+    //To give  background colour on low width device even after no scrolled
+    function addBg() {
+    var element = document.getElementsByClassName("navbar")[0];
+    element.classList.toggle("bg-dark");
+  }
     </script>
-
   </body>
 
 </html>

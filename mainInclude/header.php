@@ -6,11 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     
      <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-
-    <!-- Font Awesome CSS -->
-    <link rel="stylesheet" type="text/css" href="css/all.min.css">
-
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.minified.css">
+    
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 
@@ -21,31 +18,42 @@
 
     <!-- Custom Style CSS -->
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
-    <title>iSchool</title>
+    <title>Digi LMS</title>
   </head>
   <body>
-     <!-- Start Nagigation -->
-    <nav class="navbar navbar-expand-sm navbar-dark pl-5 fixed-top">
-      <a href="index.php" class="navbar-brand">iSchool</a>
-      <span class="navbar-text">Learn and Implement</span>
-      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="myMenu">
-        <ul class="navbar-nav pl-5 custom-nav">
-          <li class="nav-item custom-nav-item"><a href="index.php" class="nav-link">Home</a></li>
-          <li class="nav-item custom-nav-item"><a href="courses.php" class="nav-link">Courses</a></li>
-          <li class="nav-item custom-nav-item"><a href="paymentstatus.php" class="nav-link">Payment Status</a></li>
-          <?php 
+
+  <nav class="navbar navbar-expand-lg navbar-dark pl-5 fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand ms-lg-5 fs-4" href="#">Digi LMS</a>
+    <button class="navbar-toggler" type="button" onclick="addBg()" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse d-lg-flex justify-content-center" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="courses.php">Courses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="paymentstatus.php">Payment Status</a>
+        </li>
+        <?php 
               session_start();   
               if (isset($_SESSION['is_login'])){
-                echo '<li class="nav-item custom-nav-item"><a href="student/studentProfile.php" class="nav-link">My Profile</a></li> <li class="nav-item custom-nav-item"><a href="logout.php" class="nav-link">Logout</a></li>';
+                echo '<li class="nav-item"><a href="student/studentProfile.php" class="nav-link">My Profile</a></li> <li class="nav-item "><a href="logout.php" class="nav-link">Logout</a></li>';
               } else {
-                echo '<li class="nav-item custom-nav-item"><a href="#login" class="nav-link" data-toggle="modal" data-target="#stuLoginModalCenter">Login</a></li> <li class="nav-item custom-nav-item"><a href="#signup" class="nav-link" data-toggle="modal" data-target="#stuRegModalCenter">Signup</a></li>';
+                echo '<li class="nav-item"><a href="#login" class="nav-link" data-bs-toggle="modal" data-bs-target="#stuLoginModalCenter">Login</a></li> <li class="nav-item"><a href="#signup" class="nav-link" data-bs-toggle="modal" data-bs-target="#stuRegModalCenter">Signup</a></li>';
               }
-          ?> 
-          <li class="nav-item custom-nav-item"><a href="#Feedback" class="nav-link">Feedback</a></li>
-          <li class="nav-item custom-nav-item"><a href="#Contact" class="nav-link">Contact</a></li>
-        </ul>
-      </div>
-    </nav> <!-- End Navigation -->
+          ?>
+          <li class="nav-item">
+          <a class="nav-link" href="#">Feedback</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> 

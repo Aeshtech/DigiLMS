@@ -12,7 +12,7 @@
  <link rel="stylesheet" href="../css/bootstrap.min.css">
 
  <!-- Font Awesome CSS -->
- <link rel="stylesheet" href="../css/all.min.css">
+ <link rel="stylesheet" href="../css/fontawesome.min.css">
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">

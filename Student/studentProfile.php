@@ -19,7 +19,6 @@ include_once('../dbConnection.php');
  $row = $result->fetch_assoc();
  $stuId = $row["stu_id"];
  $stuName = $row["stu_name"]; 
- $stuOcc = $row["stu_occ"];
  $stuImg = $row["stu_img"];
 
 }
@@ -35,7 +34,7 @@ include_once('../dbConnection.php');
    $stu_image_temp = $_FILES['stuImg']['tmp_name'];
    $img_folder = '../image/stu/'. $stu_image; 
    move_uploaded_file($stu_image_temp, $img_folder);
-   $sql = "UPDATE student SET stu_name = '$stuName', stu_occ = '$stuOcc', stu_img = '$img_folder' WHERE stu_email = '$stuEmail'";
+   $sql = "UPDATE student SET stu_name = '$stuName', stu_img = '$img_folder' WHERE stu_email = '$stuEmail'";
    if($conn->query($sql) == TRUE){
    // below msg display on form submit success
    $passmsg = '<div class="alert alert-success col-sm-6 ml-5 mt-2" role="alert"> Updated Successfully </div>';
@@ -60,11 +59,6 @@ include_once('../dbConnection.php');
     <div class="form-group">
       <label for="stuName">Name</label>
       <input type="text" class="form-control" id="stuName" name="stuName" value=" <?php if(isset($stuName)) {echo $stuName;} ?>">
-    </div>
-    <div class="form-group">
-      <!-- Student doesnt mean school student it also means learner -->
-      <label for="stuOcc">Occupation</label>
-      <input type="text" class="form-control" id="stuOcc" name="stuOcc" value=" <?php if(isset($stuOcc)) {echo $stuOcc;} ?>">
     </div>
     <div class="form-group">
       <label for="stuImg">Upload Image</label>
